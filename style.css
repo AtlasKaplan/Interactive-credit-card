@@ -1,0 +1,124 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    /* overflow-x: hidden; */
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5,h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+.attribution{
+    text-align: center;
+    margin: 0 auto;
+}
+/* ///////////////////////////////////////////////////////////////// */
+.container{
+    height: 97vh;
+    max-width: 375px;
+    min-width: 375px;
+    
+    margin: 0 auto;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+}
+
+/* ////////////////////////////////CARDS///////////////////////////////// */
+.card-side{
+    background-image: url('images/bg-main-mobile.png');
+    background-size: cover;
+    height: 30%;
+    width: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative; 
+    padding-top: 1.75rem;
+}
+.back-card{
+    position: absolute;
+    left: 4rem;
+}
+.back-card img{
+    width: 300px;
+}
+.card-pin{
+    position: absolute;
+    top: 4.45rem;
+    left: 14.75rem;
+    font-size: .85rem;
+}
+.front-card{
+    
+}
+.front-card-img{
+    width: 300px;
+    position: absolute;
+    left: 1rem;
+    top: 7.5rem;
+    
+    
+}
+.card-logo{
+    position: absolute;
+    width: 70px;
+    top: 8.5rem;
+    left: 2rem;
+
+    z-index: 1;
+}
+.card-number{
+    position: absolute;
+    z-index: 1;
+    top: 13rem;
+    left: 1.85rem;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+}
+.card-name{
+    position: absolute;
+    z-index: 1;
+    top: 15.5rem;
+    left: 1.75rem;
+    font-size: .75rem;
+    letter-spacing: 1px;
+}
+.card-date{
+    position: absolute;
+    z-index: 1;
+    top: 15.5rem;
+    left: 16.5rem;
+    font-size: 0.75rem;
+}
+/* ///////////////////////FORMS////////////////////////////////////////// */
+.form{
+    margin: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.input-date{
+
+}
+button{
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+}
