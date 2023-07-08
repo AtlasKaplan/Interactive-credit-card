@@ -41,6 +41,7 @@ p, h1, h2, h3, h4, h5,h6 {
     margin: 0 auto;
     font-family: 'Space Grotesk', sans-serif;
     text-transform: uppercase;
+    
 }
 
 /* ////////////////////////////////CARDS///////////////////////////////// */
@@ -90,29 +91,30 @@ p, h1, h2, h3, h4, h5,h6 {
     top: 13rem;
     left: 1.85rem;
     letter-spacing: 3px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 .card-name{
     position: absolute;
     z-index: 1;
     top: 15.5rem;
     left: 1.75rem;
-    font-size: .75rem;
+    font-size: .70rem;
     letter-spacing: 1px;
+    
 }
 .card-date{
     position: absolute;
     z-index: 1;
     top: 15.5rem;
     left: 16.5rem;
-    font-size: 0.75rem;
+    font-size: 0.70rem;
 }
 /* ///////////////////////FORMS////////////////////////////////////////// */
 .form{
     margin: 5rem 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.25em;
+    gap: 0.75rem;
 }
 .input-name, .input-number{
     padding: .5rem;
@@ -133,9 +135,11 @@ p, h1, h2, h3, h4, h5,h6 {
     padding: 0.5rem 0.25rem;
     border: 1px solid hsla(279, 6%, 55%, 0.5);
     border-radius: 7px;
+    width: 172.5px;
+    margin-top: 0.5rem;
 }
 .input-exp{
-    width: 60px;
+    width: 75px;
     padding: 0.5rem 0.75rem;
     border: 1px solid hsla(279, 6%, 55%, 0.5);
     border-radius: 7px;
@@ -144,9 +148,26 @@ p, h1, h2, h3, h4, h5,h6 {
 .input-date{
     display: flex;
 }
-.exp-date{
+.inputs{
+    margin-top: 0.5rem;
+}
+.name, .card{
+    display: flex;
+    flex-direction: column;
+    height: 84px;
+}
+.cvc{
+    width: 100px;
+    margin-left: 1rem;
+}
+label{
+    margin-bottom: 0.5rem;
+    font-size: 0.80rem;  
+    font-weight: 600;
+    letter-spacing: 2px;
     
 }
+
 
 button{
     background-color: hsl(278, 68%, 11%);
@@ -154,10 +175,12 @@ button{
     padding: 0.75rem;
     border-radius: 7px;
     border: none;
+    margin-top: 1.75rem;
 }
 
 .error-state{
     color: hsl(0, 100%, 66%);
     font-size: 0.75rem;
     text-transform: none;
+    display: none;
 }
