@@ -175,6 +175,7 @@ button{
     border-radius: 7px;
     border: none;
     margin-top: 1.75rem;
+    cursor: pointer;
 }
 
 .error-state{
@@ -206,4 +207,5 @@ h2{
 }
 .complet-button{
     padding: 1rem 8rem;
+    cursor: pointer;
 }
