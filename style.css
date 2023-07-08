@@ -112,11 +112,52 @@ p, h1, h2, h3, h4, h5,h6 {
     margin: 5rem 1rem;
     display: flex;
     flex-direction: column;
+    gap: 0.25em;
 }
-.input-date{
+.input-name, .input-number{
+    padding: .5rem;
+    border: 1px solid hsla(279, 6%, 55%, 0.5);
+    border-radius: 7px;
+}
+.input-name:focus, .input-number:focus, .input-exp:focus,.input-cvc:focus{
+    outline-color: hsl(249, 99%, 64%);
+}
+.input-error{
+    border-color: hsl(0, 100%, 66%) !important;
+}
+.input-error:focus{
+    outline: none !important;
+}
 
+.input-cvc{
+    padding: 0.5rem 0.25rem;
+    border: 1px solid hsla(279, 6%, 55%, 0.5);
+    border-radius: 7px;
 }
+.input-exp{
+    width: 60px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid hsla(279, 6%, 55%, 0.5);
+    border-radius: 7px;
+}
+
+.input-date{
+    display: flex;
+}
+.exp-date{
+    
+}
+
 button{
     background-color: hsl(278, 68%, 11%);
     color: white;
+    padding: 0.75rem;
+    border-radius: 7px;
+    border: none;
+}
+
+.error-state{
+    color: hsl(0, 100%, 66%);
+    font-size: 0.75rem;
+    text-transform: none;
 }
