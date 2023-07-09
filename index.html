@@ -50,7 +50,7 @@
 
           <div class="card">
             <label for="">Card Number</label>
-            <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="input-number">
+            <input maxlength="19" type="text" placeholder="e.g. 1234 5678 9123 0000" class="input-number">
             <p class="error-state">Wrong format, numbers only</p>
           </div>
           
@@ -59,15 +59,15 @@
             <div class="exp-date">
               <label for="">Exp. Date (MM/YY)</label>
               <div class="inputs">
-                <input type="text" placeholder="MM" class="input-month">
-                <input type="text" placeholder="YY" class="input-year">
+                <input maxlength="2" type="text" placeholder="MM" class="input-month">
+                <input maxlength="2" type="text" placeholder="YY" class="input-year">
               </div>
               <p class="error-state">Can't be blank</p>
             </div>
 
             <div class="cvc">
               <label for="">CVC</label>
-              <input type="text" placeholder="e.g. 123" class="input-cvc">
+              <input maxlength="3" type="text" placeholder="e.g. 123" class="input-cvc">
               <p class="error-state">Can't be blank</p>
             </div>
 
@@ -94,7 +94,9 @@
       Coded by <a href="#">Atlas K</a>.
     </div>
   </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js"
+    integrity="sha512-SvgzybymTn9KvnNGu0HxXiGoNeOi0TTK7viiG0EGn2Qbeu/NFi3JdWrJs2JHiGA1Lph+dxiDv5F9gDlcgBzjfA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="index.js"></script>
 </body>
 </html>

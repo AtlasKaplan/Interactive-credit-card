@@ -8,6 +8,7 @@ const cardNumber = document.querySelector('.card-number');
 const cardMonth = document.querySelector('.card-date');
 const cardYear = document.querySelector('.card-year');
 const cardCVC = document.querySelector('.card-pin');
+
 const form = document.querySelector('.form');
 
 inputName.addEventListener('input', ()=> {
@@ -22,7 +23,7 @@ inputNumber.addEventListener('input', () => {
     cardNumber.innerText = inputNumber.value;
 
     if (inputNumber.value.length === 0) {
-        cardName.innerText = "0000 0000 0000 0000";
+        cardNumber.innerText = "0000 0000 0000 0000";
     }
 })
 
@@ -49,3 +50,7 @@ inputCVC.addEventListener('input', () => {
         cardCVC.innerText = "000";
     }
 })
+
+var cleave = new Cleave('.input-number', {
+    creditCard: true,
+});
