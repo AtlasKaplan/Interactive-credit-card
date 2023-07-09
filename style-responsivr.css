@@ -64,7 +64,7 @@
     .input-date{
         height: 92px;
     }
-    .input-exp{
+    .input-month, .input-year{
         width: 85px;
     }
 }
