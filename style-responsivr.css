@@ -12,7 +12,7 @@
     .input-side{
         width: 60%;
         margin-left: 5rem;
-        margin-top: 5rem;
+        margin-top: 6rem;
     }
     
     .back-card{
@@ -51,5 +51,9 @@
         font-size: 0.8rem;
         top: 17.5rem;
         left: 20rem;
+    }
+    .completed-side{
+        margin-left: 17.5rem;
+        margin-top: 12.5rem;
     }
 }
