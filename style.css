@@ -46,14 +46,22 @@ p, h1, h2, h3, h4, h5,h6 {
 
 /* ////////////////////////////////CARDS///////////////////////////////// */
 .card-side{
-    background-image: url('images/bg-main-mobile.png');
-    background-size: cover;
     height: 30%;
     width: 100%;
     background-repeat: no-repeat;
     color: white;
     position: relative; 
     padding-top: 1.75rem;
+}
+.background{
+    background-image: url('images/bg-main-mobile.png');
+    background-size: cover;
+    height: 30%;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    min-width: 375px;
 }
 .back-card{
     position: absolute;
