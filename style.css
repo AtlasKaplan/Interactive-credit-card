@@ -35,7 +35,7 @@ p, h1, h2, h3, h4, h5,h6 {
 /* ///////////////////////////////////////////////////////////////// */
 .container{
     height: 97vh;
-    max-width: 375px;
+    max-width: 750px;
     min-width: 375px;
     
     margin: 0 auto;
@@ -58,6 +58,7 @@ p, h1, h2, h3, h4, h5,h6 {
 .back-card{
     position: absolute;
     left: 4rem;
+    width: 300px;
 }
 .back-card img{
     width: 300px;
@@ -111,10 +112,12 @@ p, h1, h2, h3, h4, h5,h6 {
 }
 /* ///////////////////////FORMS////////////////////////////////////////// */
 .form{
-    margin: 5rem 1rem;
+    margin: 5rem auto;
+    padding-inline: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    max-width: 500px;
 }
 .input-name, .input-number{
     padding: .5rem;

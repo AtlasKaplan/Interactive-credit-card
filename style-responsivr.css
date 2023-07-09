@@ -1,0 +1,55 @@
+@media (min-width:1275px) {
+    .container{
+        display: flex;
+        max-width: 1440px;
+    }
+    .card-side{
+        background-image: url('images/bg-main-desktop.png');
+        height: 100%;
+        width: 40%;
+    }
+
+    .input-side{
+        width: 60%;
+        margin-left: 5rem;
+        margin-top: 5rem;
+    }
+    
+    .back-card{
+        width: 375px;
+        transform: translateY(333px);
+        left: 17rem;
+    }
+    .back-card img {
+        width: 375px;
+    }
+    .front-card-img{
+        width: 375px;
+    }
+    .front-card{
+        width: 375px;
+        position: absolute;
+        left: 12.5rem;
+        top: 1rem;
+    }
+    .card-pin{
+        font-size: 1rem;
+        top: 5.6rem;
+        left: 18.5rem;
+    }
+    .card-number{
+        font-size: 1.5rem;
+        top: 14rem;
+    }
+    .card-name{
+        font-size: 0.8rem;
+        top: 17.5rem;
+        left: 2rem;
+    }
+
+    .card-date{
+        font-size: 0.8rem;
+        top: 17.5rem;
+        left: 20rem;
+    }
+}
