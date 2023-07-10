@@ -45,13 +45,13 @@
           <div class="name">
             <label for="input-name">Cardholder Name</label>
             <input type="text" placeholder="e.g. Jane Appleseed" class="input-name">
-            <p class="error-state">Can't be blank</p>
+            <p id="name-error" class="error-state hide">Can't be blank</p>
           </div>
 
           <div class="card">
             <label for="">Card Number</label>
-            <input maxlength="19" type="text" placeholder="e.g. 1234 5678 9123 0000" class="input-number">
-            <p class="error-state">Wrong format, numbers only</p>
+            <input id="input-number" maxlength="19" type="text" placeholder="e.g. 1234 5678 9123 0000" class="input-number">
+            <p id="number-error" class="error-state hide">Wrong format, numbers only</p>
           </div>
           
           <div class="input-date">
@@ -62,13 +62,13 @@
                 <input maxlength="2" type="text" placeholder="MM" class="input-month">
                 <input maxlength="2" type="text" placeholder="YY" class="input-year">
               </div>
-              <p class="error-state">Can't be blank</p>
+              <p id="month-error" class="error-state hide">Can't be blank</p>
             </div>
 
             <div class="cvc">
               <label for="">CVC</label>
               <input maxlength="3" type="text" placeholder="e.g. 123" class="input-cvc">
-              <p class="error-state">Can't be blank</p>
+              <p id="cvc-error" class="error-state hide">Can't be blank</p>
             </div>
 
           </div>
@@ -79,12 +79,12 @@
 
       </div>
     
-    <!-- <div class="completed-side">
+    <div class="completed-side hide">
       <img src="images/icon-complete.svg" alt="">
       <h2>Thank you!</h2>
       <p>We've added your card details</p>
       <button class="complet-button">Continue</button>
-    </div> -->
+    </div>
 
     </div>
 </main>

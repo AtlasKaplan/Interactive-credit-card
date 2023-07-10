@@ -159,6 +159,7 @@ p, h1, h2, h3, h4, h5,h6 {
 
 .input-date{
     display: flex;
+    height: 92px;
 }
 .inputs{
     margin-top: 0.5rem;
@@ -194,7 +195,11 @@ button{
     color: hsl(0, 100%, 66%);
     font-size: 0.75rem;
     text-transform: none;
-    display: none;
+    
+}
+
+.hide{
+    display: none !important;
 }
 /* ///////////////////////COMPLETE////////////////////////////////////////// */
 
