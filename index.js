@@ -100,64 +100,66 @@ inputCVC.addEventListener('input', () => {
 
 
 
-form.addEventListener('click', (e) => {
-    e.preventDefault();
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Evita el envío del formulario por defecto
 
+    let hasError = false;
 
-if (inputName.value.length == 0){
-    nameError.classList.remove('hide');
-    inputName.classList.add('input-error');
-}
-else {
-    nameError.classList.add('hide');
-    inputName.classList.remove('input-error');
-}
+    if (inputName.value.length === 0) {
+        nameError.classList.remove('hide');
+        inputName.classList.add('input-error');
+        hasError = true;
+    } else {
+        nameError.classList.add('hide');
+        inputName.classList.remove('input-error');
+    }
 
+    const numberI = inputNumber.value.trim();
+    const numberRegex = /^[0-9\s]*$/;
 
+    if (numberI.length === 0) {
+        numberError.innerText = "Can't be blank";
+        inputNumber.classList.add('input-error');
+        hasError = true;
+    } else if (!numberRegex.test(numberI)) {
+        numberError.innerText = "Wrong format, numbers only";
+        inputNumber.classList.add('input-error');
+        hasError = true;
+    } else {
+        numberError.innerText = "";
+        inputNumber.classList.remove('input-error');
+    }
 
+    if (inputMonth.value.length === 0) {
+        monthError.classList.remove('hide');
+        inputMonth.classList.add('input-error');
+        hasError = true;
+    } else {
+        monthError.classList.add('hide');
+        inputMonth.classList.remove('input-error');
+    }
 
-const numberI = inputNumber.value.trim();
-const numberRegex = /^[0-9\s]*$/;
+    if (inputYear.value.length === 0) {
+        monthError.classList.remove('hide');
+        inputYear.classList.add('input-error');
+        hasError = true;
+    } else {
+        monthError.classList.add('hide');
+        inputYear.classList.remove('input-error');
+    }
 
-if (numberI.length === 0) {
-    numberError.innerText = "Can't be blank";
-    inputNumber.classList.add('input-error');
-} else if (!numberRegex.test(numberI)) {
-    numberError.innerText = "Wrong format, numbers only";
-    inputNumber.classList.add('input-error');
-} else {
-    numberError.innerText = "";
-    inputNumber.classList.remove('input-error');
-}
+    if (inputCVC.value.length === 0) {
+        cvcError.classList.remove('hide');
+        inputCVC.classList.add('input-error');
+        hasError = true;
+    } else {
+        cvcError.classList.add('hide');
+        inputCVC.classList.remove('input-error');
+    }
 
-
-    
-if (inputMonth.value.length == 0) {
-    monthError.classList.remove('hide');
-    inputMonth.classList.add('input-error');
-}
-else {
-    monthError.classList.add('hide');
-    inputMonth.classList.remove('input-error');
-}
-
-if (inputYear.value.length == 0) {
-    monthError.classList.remove('hide');
-    inputYear.classList.add('input-error');
-}
-else {
-    monthError.classList.add('hide');
-    inputYear.classList.remove('input-error');
-}
-
-if (inputCVC.value.length == 0) {
-    cvcError.classList.remove('hide');
-    inputCVC.classList.add('input-error');
-}
-else {
-    cvcError.classList.add('hide');
-    inputCVC.classList.remove('input-error');
-}
-
+    if (!hasError) {
+        
+        console.log('amas gym');
+    }
 });
 
