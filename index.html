@@ -43,21 +43,21 @@
         <form class="form" action="">
 
           <div class="name">
-            <label for="input-name">Cardholder Name</label>
-            <input type="text" placeholder="e.g. Jane Appleseed" class="input-name">
+            <label >Cardholder Name</label>
+            <input type="text" placeholder="e.g. Jane Appleseed" id="input-name" class="input-name">
             <p id="name-error" class="error-state hide">Can't be blank</p>
           </div>
 
           <div class="card">
-            <label for="">Card Number</label>
+            <label >Card Number</label>
             <input id="input-number" maxlength="19" type="text" placeholder="e.g. 1234 5678 9123 0000" class="input-number">
-            <p id="number-error" class="error-state hide">Wrong format, numbers only</p>
+            <p id="number-error" class="error-state "></p>
           </div>
           
           <div class="input-date">
 
             <div class="exp-date">
-              <label for="">Exp. Date (MM/YY)</label>
+              <label >Exp. Date (MM/YY)</label>
               <div class="inputs">
                 <input maxlength="2" type="text" placeholder="MM" class="input-month">
                 <input maxlength="2" type="text" placeholder="YY" class="input-year">
@@ -66,7 +66,7 @@
             </div>
 
             <div class="cvc">
-              <label for="">CVC</label>
+              <label >CVC</label>
               <input maxlength="3" type="text" placeholder="e.g. 123" class="input-cvc">
               <p id="cvc-error" class="error-state hide">Can't be blank</p>
             </div>

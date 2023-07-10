@@ -16,23 +16,43 @@ const nameError = document.querySelector('#name-error');
 const monthError = document.querySelector('#month-error');
 const cvcError = document.querySelector('#cvc-error');
 
-// function space(el, after) {
-//     after = after || 4;
-//     var v = el.value.replace(/[^\dA-Z]/g, ''),
-//         reg = new RegExp(".{" + after + "}", "g")
-//     el.value = v.replace(reg, function (a, b, c) {
-//         return a + ' ';
-//     });
-// }
 
-// var el = document.getElementById('input-number');
-// el.addEventListener('keyup', function () {
-//     space(this, 4);
-// });
+function space(el, after) {
+    after = after || 4;
+    var v = el.value.replace(/[^A-Z\d]/ig, ''),
+        reg = new RegExp(".{" + after + "}", "g");
+    el.value = v.replace(reg, function (a) {
+        return a + ' ';
+    });
+}
 
-// var cleave = new Cleave('input-number', {
-//     creditCard: true,
-// });
+var el = document.getElementById('input-number');
+el.addEventListener('keyup', function () {
+    space(this, 4);
+});
+
+
+
+function convertirMayusculas(inputName) {
+    inputName.value = inputName.value.toUpperCase();
+}
+
+var input = document.getElementById('input-name');
+input.addEventListener('keyup', function () {
+    convertirMayusculas(this);
+});
+
+function convertirMayusculas(inputNumber) {
+    inputNumber.value = inputNumber.value.toUpperCase();
+}
+
+var input = document.getElementById('input-number');
+input.addEventListener('keyup', function () {
+    convertirMayusculas(this);
+});
+
+
+
 
 inputName.addEventListener('input', ()=> {
     cardName.innerText = inputName.value;
@@ -96,19 +116,22 @@ else {
 
 
 
-const numberI = inputNumber.value;
-    const numberRegex = /^[0-9\s]*$/;
+const numberI = inputNumber.value.trim();
+const numberRegex = /^[0-9\s]*$/;
 
-if (!numberRegex.test(numberI)) {
-    numberError.classList.remove('hide');
+if (numberI.length === 0) {
+    numberError.innerText = "Can't be blank";
     inputNumber.classList.add('input-error');
-} 
-else {
-    numberError.classList.add('hide');
+} else if (!numberRegex.test(numberI)) {
+    numberError.innerText = "Wrong format, numbers only";
+    inputNumber.classList.add('input-error');
+} else {
+    numberError.innerText = "";
     inputNumber.classList.remove('input-error');
 }
 
 
+    
 if (inputMonth.value.length == 0) {
     monthError.classList.remove('hide');
     inputMonth.classList.add('input-error');
