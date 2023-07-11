@@ -67,4 +67,8 @@
     .input-month, .input-year{
         width: 85px;
     }
+    .complet-button {
+        padding: 1rem 9rem;
+        font-size: 1.15rem;
+    }
 }

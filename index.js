@@ -16,6 +16,10 @@ const nameError = document.querySelector('#name-error');
 const monthError = document.querySelector('#month-error');
 const cvcError = document.querySelector('#cvc-error');
 
+const formSide = document.querySelector('.input-side');
+const thankSide = document.querySelector('.completed-side');
+
+
 
 function space(el, after) {
     after = after || 4;
@@ -101,7 +105,7 @@ inputCVC.addEventListener('input', () => {
 
 
 form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Evita el envío del formulario por defecto
+    event.preventDefault();
 
     let hasError = false;
 
@@ -159,7 +163,9 @@ form.addEventListener('submit', function (event) {
 
     if (!hasError) {
         
-        console.log('amas gym');
+        formSide.classList.add('hide');
+        thankSide.classList.remove('hide');
+        console.log('ola?');
     }
 });
 
